@@ -1,25 +1,31 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import styles from './Header.module.scss';
-import {motion} from "framer-motion";
 
+const Header = () => {
+    const menuItems = [
+        { label: "Для чого сайт?", anchor: "section1" },
+        { label: "Як замовити", anchor: "section2" },
+        { label: "Технології розробки", anchor: "section3" },
+        { label: "Чому саме ми", anchor: "section4" },
+        { label: "Наші роботи", anchor: "section5" },
+        { label: "Зв'язатись з нами", anchor: "section6" },
+    ];
 
-function Header() {
     const headerAnimation = {
         hidden: {
-            y: -10,
             opacity: 0,
+            y: -10,
         },
-        visible: {
-            y: 0,
+        visible: (i) => ({
             opacity: 1,
+            y: 0,
             transition: {
-                delay: 0.5,
-                duration: 1,
-                ease: "easeInOut"
-            },
-        },
-    }
+                delay: 1 + i * 0.2,
+                duration: 0.5
+            }
+        })
+    };
 
     return (
         <motion.header
@@ -29,16 +35,24 @@ function Header() {
         >
             <div className="container">
                 <ul className={styles.menu}>
-                    <li className={styles.menuItem}>Для чого сайт?</li>
-                    <li className={styles.menuItem}>Як замовити</li>
-                    <li className={styles.menuItem}>Технології розробки</li>
-                    <li className={styles.menuItem}>Чому саме ми</li>
-                    <li className={styles.menuItem}>Наші роботи</li>
-                    <li className={styles.menuItem}>Зв'язатись з нами</li>
+                    {menuItems.map((item, index) => (
+                        <motion.li
+                            key={index}
+                            initial="hidden"
+                            whileInView="visible"
+                            custom={index}
+                            variants={headerAnimation}
+                            className={styles.menuItem}
+                        >
+                            <a href={`#${item.anchor}`} className={styles.menuLink}>
+                                {item.label}
+                            </a>
+                        </motion.li>
+                    ))}
                 </ul>
             </div>
         </motion.header>
     )
 }
 
-export default Header
+export default Header;
