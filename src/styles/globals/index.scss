@@ -1,0 +1,12 @@
+@import './reset';
+@import './variables';
+@import './base';
+@import '../components/sharedStyles';
+
+@font-face {
+  font-family: 'Fixel Variable';
+  src: url('../../assets/fonts/FixelVariable.ttf') format('truetype');
+  /* Додаткові властивості шрифта, якщо потрібно */
+  font-weight: normal;
+  font-style: normal;
+}
