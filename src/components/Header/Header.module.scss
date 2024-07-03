@@ -1,4 +1,24 @@
-h1 {
-  font-family: "Fixel Variable";
+@import '../../styles/globals/_variables.scss';
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.menuItem {
+  font-family: $font-fixel-extra-bold;
+  font-size: calc(#{$size}/1.4);
+  color: $black;
+  margin: 20px;
+  white-space: nowrap;
 }
