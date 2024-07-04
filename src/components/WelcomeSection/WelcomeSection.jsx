@@ -43,7 +43,8 @@ const WelcomeSection = () => {
             <motion.div
                 initial="hidden"
                 whileInView="visible"
-                custom={0.5}
+                viewport={{ once: true }}
+                custom={0.7}
                 variants={leftTextAnimation}
             >
                 <div className={styles.left}>
@@ -51,6 +52,7 @@ const WelcomeSection = () => {
                         <motion.img
                             initial="hidden"
                             whileInView="visible"
+                            viewport={{ once: true }}
                             custom={0.4}
                             variants={leftTextAnimation}
                             src={logoImage} alt="logo" className={styles.logo} />
@@ -58,27 +60,25 @@ const WelcomeSection = () => {
                     <motion.h1
                         initial="hidden"
                         whileInView="visible"
+                        viewport={{ once: true }}
                         custom={0.5}
                         variants={leftTextAnimation}
                         className={styles.title}>Ласкаво просимо до SiDE</motion.h1>
                     <motion.p
                         initial="hidden"
                         whileInView="visible"
+                        viewport={{ once: true }}
                         custom={0.6}
                         variants={leftTextAnimation}
                         className={styles.text}>Створюємо негри швидко Створюємо негри швидко Створюємо негри швидко.</motion.p>
-                    <motion.button
-                        initial="hidden"
-                        whileInView="visible"
-                        custom={0.7}
-                        variants={leftTextAnimation}
-                        className={styles.button}>Хочу замовити</motion.button>
+                    <button className={styles.animatedButton}>Хочу замовити</button>
                 </div>
             </motion.div>
 
             <motion.div
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
                 custom={0.5}
                 variants={rightTextAnimation}
             >
@@ -86,6 +86,7 @@ const WelcomeSection = () => {
                     <motion.img
                         initial="hidden"
                         whileInView="visible"
+                        viewport={{ once: true }}
                         custom={1}
                         variants={rightTextAnimation}
                         src={rightImage} alt="user-welcome-section" className={styles.rightImage} />

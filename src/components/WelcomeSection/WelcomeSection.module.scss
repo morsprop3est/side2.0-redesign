@@ -1,12 +1,12 @@
-// WelcomeSection.scss
-
 @import '../../styles/globals/_variables.scss';
 @import '../../styles/components/_buttonStyles.scss';
+@import '../../styles/components/_sharedStyles.scss';
+
 
 .container {
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: $desktop;
   margin: 200px auto;
 
   .left {
@@ -29,18 +29,20 @@
   }
 
   .title {
-    font-size: 48px;
+    font-size: 40px;
     margin: 20px 0;
-    font-family: $font-fixel-extra-light;
+    font-family: $font-family-fixel;
+    font-weight: $font-weight-extralight;
   }
 
   .text {
     font-size: 20px;
     margin: 20px auto;
-    font-family: $font-fixel-light;
+    font-family: $font-family-fixel;
+    font-weight: $font-weight-light;
   }
 
-  .button {
+  .animatedButton {
     @include buttonBaseStyles;
     margin-top: 20px;
 

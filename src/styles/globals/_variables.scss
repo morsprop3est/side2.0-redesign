@@ -9,12 +9,11 @@ $black: #222222;
 $white: #F5F5F5;
 $yellow: #F2B819;
 
-$font-fixel-thin: "FixelDisplay-Thin", sans-serif;
-$font-fixel-extra-light: "FixelDisplay-ExtraLight", sans-serif;
-$font-fixel-light: "FixelDisplay-Light", sans-serif;
-$font-fixel-regular: "FixelDisplay-Regular", sans-serif;
-$font-fixel-medium: "FixelDisplay-Medium", sans-serif;
-$font-fixel-semi-bold: "FixelDisplay-SemiBold", sans-serif;
-$font-fixel-bold: "FixelDisplay-Bold", sans-serif;
-$font-fixel-extra-bold: "FixelDisplay-ExtraBold", sans-serif;
-$font-fixel-black: "FixelDisplay-Black", sans-serif;
+$font-family-fixel: 'FixelDisplay', sans-serif;
+
+$font-weight-thin: 100;
+$font-weight-extralight: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;

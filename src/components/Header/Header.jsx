@@ -31,6 +31,7 @@ const Header = () => {
         <motion.header
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             variants={headerAnimation}
         >
             <div className="container">
@@ -40,6 +41,7 @@ const Header = () => {
                             key={index}
                             initial="hidden"
                             whileInView="visible"
+                            viewport={{ once: true }}
                             custom={index}
                             variants={headerAnimation}
                             className={styles.menuItem}

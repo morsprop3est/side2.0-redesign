@@ -12,7 +12,8 @@
   cursor: pointer;
   border: none;
   outline: none;
-  font-family: $font-fixel-regular;
+  font-family: $font-family-fixel;
+  font-weight: $font-weight-light;
   transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 

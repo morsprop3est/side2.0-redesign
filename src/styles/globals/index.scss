@@ -3,6 +3,7 @@
 @import './base';
 @import '../components/sharedStyles';
 
+
 .container {
   width: 100%;
   max-width: 1000px;
@@ -19,47 +20,51 @@
 }
 
 @font-face {
-  font-family: 'FixelDisplay Thin';
-  src: url('../../assets/fonts/FixelDisplay-Thin.woff2');
+  font-family: 'FixelDisplay';
+  src: url('../../assets/fonts/FixelDisplay-Thin.woff2') format('woff2'),
+  url('../../assets/fonts/FixelDisplay-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'FixelDisplay ExtraLight';
-  src: url('../../assets/fonts/FixelDisplay-ExtraLight.woff2') format('truetype');
+  font-family: 'FixelDisplay';
+  src: url('../../assets/fonts/FixelDisplay-ExtraLight.woff2') format('woff2'),
+  url('../../assets/fonts/FixelDisplay-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'FixelDisplay Light';
-  src: url('../../assets/fonts/FixelDisplay-Light.woff2') format('truetype');
+  font-family: 'FixelDisplay';
+  src: url('../../assets/fonts/FixelDisplay-Light.woff2') format('woff2'),
+  url('../../assets/fonts/FixelDisplay-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'FixelDisplay Regular';
-  src: url('../../assets/fonts/FixelDisplay-Regular.woff2') format('truetype');
+  font-family: 'FixelDisplay';
+  src: url('../../assets/fonts/FixelDisplay-Regular.woff2') format('woff2'),
+  url('../../assets/fonts/FixelDisplay-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'FixelDisplay Medium';
-  src: url('../../assets/fonts/FixelDisplay-Medium.woff2') format('truetype');
+  font-family: 'FixelDisplay';
+  src: url('../../assets/fonts/FixelDisplay-Medium.woff2') format('woff2'),
+  url('../../assets/fonts/FixelDisplay-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'FixelDisplay SemiBold';
-  src: url('../../assets/fonts/FixelDisplay-SemiBold.woff2') format('truetype');
+  font-family: 'FixelDisplay';
+  src: url('../../assets/fonts/FixelDisplay-Bold.woff2') format('woff2'),
+  url('../../assets/fonts/FixelDisplay-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
 }
 
-@font-face {
-  font-family: 'FixelDisplay Bold';
-  src: url('../../assets/fonts/FixelDisplay-Bold.woff2') format('truetype');
-}
-
-@font-face {
-  font-family: 'FixelDisplay ExtraBold';
-  src: url('../../assets/fonts/FixelDisplay-Medium.woff2') format('truetype');
-}
-
-@font-face {
-  font-family: 'FixelDisplay Black';
-  src: url('../../assets/fonts/FixelDisplay-Black.woff2') format('truetype');
-}
 
