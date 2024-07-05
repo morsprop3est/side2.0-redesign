@@ -14,7 +14,7 @@ const StepsSlider = () => {
     };
 
     return (
-        <div className={styles.sliderBackground}>
+        <div className={styles.sliderBackground} id = "section2">
             <div className={styles.sliderContainer}>
                 <div className={styles.leftContent}>
                     <img src={stepsData[currentStep].image} alt={stepsData[currentStep].title} />
