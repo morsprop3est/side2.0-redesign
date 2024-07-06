@@ -9,10 +9,9 @@
 
 .title {
   text-align: center;
-  font-size: 40px;
+  font-size: 28px;
   margin-bottom: 100px;
-  font-family: $font-family-fixel;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-medium;
 }
 
 .blockContainer {
@@ -38,20 +37,20 @@
 }
 
 .image {
-  width: auto;
+  width: 150px;
   height: 150px;
-  margin-bottom: 20px;
+  background-color: gray;
 }
 
 .textLarge {
-  font-size: 24px;
+  padding-top: 20px;
+  font-size: 20px;
   margin-bottom: 10px;
-  font-family: $font-family-fixel;
   font-weight: $font-weight-regular;
 }
 
 .textSmall {
-  font-size: 20px;
-  font-family: $font-family-fixel;
+  padding-top: 20px;
+  font-size: 18px;
   font-weight: $font-weight-light;
 }

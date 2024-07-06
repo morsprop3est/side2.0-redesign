@@ -22,9 +22,8 @@
 }
 
 .menuItem {
-  font-family: $font-family-fixel;
   font-weight: $font-weight-light;
-  font-size: calc(#{$size}/1.4);
+  font-size: 16px;
   color: $black;
   margin: 20px;
   white-space: nowrap;

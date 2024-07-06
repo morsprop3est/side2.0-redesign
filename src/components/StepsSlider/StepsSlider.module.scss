@@ -2,54 +2,64 @@
 @import '../../styles/components/_buttonStyles.scss';
 @import '../../styles/components/_sharedStyles.scss';
 
-
 .sliderBackground {
   background-color: $black;
   width: 100%;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.25),
+              0px 5px 10px rgba(0, 0, 0, 0.25);
 }
 
-.sliderContainer {
+.container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1200px;
+  justify-content: space-between;
   margin: 0 auto;
-  padding: 200px;
+  padding: 100px 0;
+  position: relative;
 }
 
 .leftContent {
   flex: 1;
   max-width: 500px;
+  position: relative;
+
+  img {
+    width: 400px;
+    height: 400px;
+    top: -50px;
+    position: absolute;
+  }
 }
 
 .rightContent {
   flex: 1;
   padding: 20px;
   max-width: 500px;
-  margin-left: 20px; /* Отступ слева */
+  margin-left: 20px;
+  overflow: hidden;
 }
 
 .stepTitle {
   font-size: 16px;
-  font-family: $font-family-fixel;
   font-weight: $font-weight-regular;
   color: $white;
 }
 
 .stepSubtitle {
-  font-size: 32px;
-  font-family: $font-family-fixel;
+  font-size: 28px;
   font-weight: $font-weight-medium;
   color: $white;
   margin-top: 20px;
 }
 
 .stepText {
-  font-size: 20px;
-  font-family: $font-family-fixel;
+  font-size: 18px;
   font-weight: $font-weight-light;
   color: $white;
   margin-top: 20px;
+  height: 100px;
+  display: flex;
+  align-items: start;
+  text-align: left;
 }
 
 .navigationButtons {
@@ -68,12 +78,13 @@
   justify-content: center;
   align-items: center;
   margin-right: 20px;
+  border: none;
+  outline: none;
 }
 
 .button button {
   background: none;
   border: none;
-  font-size: 20px;
-  font-family: $font-family-fixel;
+  font-size: 18px;
   font-weight: $font-weight-regular;
 }

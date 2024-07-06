@@ -6,7 +6,6 @@
 .container {
   display: flex;
   justify-content: space-between;
-  max-width: $desktop;
   margin: 200px auto;
 
   .left {
@@ -19,7 +18,8 @@
 
   .logoContainer {
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    margin-left: 20px;
     width: 100%;
   }
 
@@ -29,16 +29,14 @@
   }
 
   .title {
-    font-size: 40px;
+    font-size: 36px;
     margin: 20px 0;
-    font-family: $font-family-fixel;
     font-weight: $font-weight-extralight;
   }
 
   .text {
-    font-size: 20px;
+    font-size: 18px;
     margin: 20px auto;
-    font-family: $font-family-fixel;
     font-weight: $font-weight-light;
   }
 

@@ -1,29 +1,51 @@
 // src/components/Section.jsx
 import React from 'react';
+import { motion } from 'framer-motion';
 import styles from './ReasonSection.module.scss';
+import { reasonData } from '../../data/reasonData';
 
-import logoImage from '../../assets/images/logo.png';
+const animationVariants = {
+    hidden: {
+        opacity: 0,
+        y: 20
+    },
+    visible: (i) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+            delay: i * 0.3
+        }
+    })
+};
 
 const Section = () => {
     return (
         <div className={`${styles.container} ${styles.sectionContainer}`}>
-            <h2 id = "section1" className={styles.title}>Для чого вам потрібен сайт</h2>
+            <motion.h2 id="section1"
+                       className={styles.title}
+                       initial="hidden"
+                       whileInView="visible"
+                       viewport={{ once: true }}
+                       variants={animationVariants}
+                       custom={0}
+            >Для чого вам потрібен сайт</motion.h2>
             <div className={styles.blockContainer}>
-                <div className={styles.block}>
-                    <img src={logoImage} alt="Тестова картинка" className={styles.image} />
-                    <p className={styles.textLarge}>Тестовий текст</p>
-                    <p className={styles.textSmall}>Ще трохи тестового тексту</p>
-                </div>
-                <div className={styles.block}>
-                    <img src={logoImage} alt="Тестова картинка" className={styles.image} />
-                    <p className={styles.textLarge}>Тестовий текст</p>
-                    <p className={styles.textSmall}>Ще трохи тестового тексту</p>
-                </div>
-                <div className={styles.block}>
-                    <img src={logoImage} alt="Тестова картинка" className={styles.image} />
-                    <p className={styles.textLarge}>Тестовий текст</p>
-                    <p className={styles.textSmall}>Ще трохи тестового тексту</p>
-                </div>
+                {reasonData.map((block, index) => (
+                    <motion.div
+                        className={styles.block}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={animationVariants}
+                        custom={1 + index}
+                        key={block.id}
+                    >
+                        <img src={block.image} alt={block.title} className={styles.image} />
+                        <p className={styles.textLarge}>{block.textLarge}</p>
+                        <p className={styles.textSmall}>{block.textSmall}</p>
+                    </motion.div>
+                ))}
             </div>
         </div>
     );

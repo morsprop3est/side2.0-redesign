@@ -1,3 +1,12 @@
+@import '../../styles/globals/_variables.scss';
+@import '../../styles/components/_buttonStyles.scss';
+@import '../../styles/components/_sharedStyles.scss';
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-fixel;
+  line-height: 1.3;
 }

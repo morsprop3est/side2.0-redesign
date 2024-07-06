@@ -1,37 +1,41 @@
 import React, { useState } from 'react';
 import styles from './StepsSlider.module.scss';
+import SlideContent from './SlideContent';
+import TextContent from './TextContent';
 import { stepsData } from '../../data/stepsData';
+import SliderButtons from './SliderButtons'; // Import the NavigationButtons component
 
 const StepsSlider = () => {
-    const [currentStep, setCurrentStep] = useState(0);
+    const [[currentStep, direction], setCurrentStep] = useState([0, 0]);
 
     const nextStep = () => {
-        setCurrentStep((prevStep) => (prevStep === stepsData.length - 1 ? 0 : prevStep + 1));
+        setCurrentStep(([currentStep]) => [
+            currentStep === stepsData.length - 1 ? 0 : currentStep + 1,
+            1,
+        ]);
     };
 
     const prevStep = () => {
-        setCurrentStep((prevStep) => (prevStep === 0 ? stepsData.length - 1 : prevStep - 1));
+        setCurrentStep(([currentStep]) => [
+            currentStep === 0 ? stepsData.length - 1 : currentStep - 1,
+            -1,
+        ]);
     };
 
     return (
-        <div className={styles.sliderBackground} id = "section2">
-            <div className={styles.sliderContainer}>
+        <div className={styles.sliderBackground} id="section2">
+            <div className={styles.container}>
                 <div className={styles.leftContent}>
-                    <img src={stepsData[currentStep].image} alt={stepsData[currentStep].title} />
+                    <SlideContent currentStep={currentStep} direction={direction} />
                 </div>
                 <div className={styles.rightContent}>
-                    <h2 className={styles.stepTitle}>{`Крок ${currentStep + 1}`}</h2>
-                    <h1 className={styles.stepSubtitle}>{stepsData[currentStep].title}</h1>
-                    <p className={styles.stepText}>{stepsData[currentStep].text}</p>
-                    <div className={styles.navigationButtons}>
-                        <div className={styles.button}>
-                            <button onClick={prevStep}>&lt;</button>
-                        </div>
-                        <div className={styles.button}>
-                            <button onClick={nextStep}>&gt;</button>
-                        </div>
-                        <h2 className={styles.stepTitle}>{`${currentStep + 1} з 5`}</h2>
-                    </div>
+                    <TextContent currentStep={currentStep} />
+                    {/* Replace the navigation buttons JSX with the imported NavigationButtons component */}
+                    <SliderButtons
+                        prevStep={prevStep}
+                        nextStep={nextStep}
+                        currentStep={currentStep}
+                    />
                 </div>
             </div>
         </div>

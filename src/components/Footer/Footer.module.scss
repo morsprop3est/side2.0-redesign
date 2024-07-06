@@ -1,0 +1,61 @@
+@import '../../styles/globals/_variables.scss';
+@import '../../styles/components/_buttonStyles.scss';
+@import '../../styles/components/_sharedStyles.scss';
+
+.footer {
+  background-color: $black;
+  width: 100%;
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Центрує по вертикалі всередині .footer */
+  align-items: center; /* Центрує по горизонталі всередині .footer */
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.footerSection {
+  flex: 1;
+  text-align: left;
+  padding: 10px;
+
+  img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    font-weight: $font-weight-regular;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    font-weight: $font-weight-light;
+
+    li {
+      padding-top: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+.copyright {
+  margin-top: 100px;
+  font-weight: $font-weight-light;
+  font-size: 16px;
+}
